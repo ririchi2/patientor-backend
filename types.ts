@@ -9,3 +9,9 @@ export interface DiaryEntry {
   comment: string;
 }
 export type NonSensitiveDiaryEntry = Omit<DiaryEntry, 'comment'>;
+
+export interface DiagnoseEntry {
+  code: string,
+  name: string,
+  latin?: string,
+}

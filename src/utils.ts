@@ -1,4 +1,4 @@
-import { NewDiaryEntry, Weather, Visibility, NewPatientEntry, Gender } from '../types';
+import { NewDiaryEntry, Weather, Visibility, NewPatientEntry, Gender } from './types';
 
 const toNewDiaryEntry = (object: any): NewDiaryEntry => {
   return {

@@ -1,5 +1,5 @@
 import diaries from '../../data/diaries';
-import { DiaryEntry, NonSensitiveDiaryEntry, NewDiaryEntry } from '../../types';
+import { DiaryEntry, NonSensitiveDiaryEntry, NewDiaryEntry } from '../types';
 
 // const diaries: Array<DiaryEntry> = diaryData as Array<DiaryEntry>;
 

@@ -28,8 +28,14 @@ const addEntry = (entry: NewPatientEntry): PatientEntry => {
   return NewPatientEntry;
 };
 
+const findById = (id: string): PatientEntry | undefined => {
+  const entry = patients.find(d => d.id === id.toString());
+  return entry;
+};
+
 export default {
   getEntries,
   getNonSensitiveEntries,
-  addEntry
+  addEntry,
+  findById
 }

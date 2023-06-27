@@ -65,6 +65,20 @@ export type Entry =
   | OccupationalHealthcareEntry
   | HealthCheckEntry;
 
+/*
+Say we want to remove the id from each Entry
+  type EntryWithoutId = Omit<Entry, 'id>;
+  But it wouldn't work as we might expect.
+  In fact, the resulting type would only contain the common properties,
+  but not the ones they don't share.
+  A possible workaround is to define a special Omit-like function
+  to deal with such situations
+*/
+// Define special omit for unions
+type UnionOmit<T, K extends string | number | symbol> = T extends unknown ? Omit<T, K> : never;
+// Define Entry without the 'id' property
+export type EntryWithoutId = UnionOmit<Entry, 'id'>;
+
 export interface PatientEntry {
   id: string;
   name: string;

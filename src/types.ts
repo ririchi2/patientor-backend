@@ -66,7 +66,7 @@ export type Entry =
   | HealthCheckEntry;
 
 /*
-Say we want to remove the id from each Entry
+Say we want to remove the id from each Entry, we'd do this
   type EntryWithoutId = Omit<Entry, 'id>;
   But it wouldn't work as we might expect.
   In fact, the resulting type would only contain the common properties,
@@ -77,7 +77,7 @@ Say we want to remove the id from each Entry
 // Define special omit for unions
 type UnionOmit<T, K extends string | number | symbol> = T extends unknown ? Omit<T, K> : never;
 // Define Entry without the 'id' property
-export type EntryWithoutId = UnionOmit<Entry, 'id'>;
+export type NewEntryWithoutId = UnionOmit<Entry, 'id'>;
 
 export interface PatientEntry {
   id: string;

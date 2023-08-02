@@ -22,7 +22,7 @@ const addEntry = (entry: NewPatientEntry): PatientEntry => {
   const NewPatientEntry = {
     id: uuidv4(),
     ...entry
-  }
+  };
 
   patients.push(NewPatientEntry);
   return NewPatientEntry;
@@ -46,7 +46,7 @@ const addPatientEntry = (id: string, entry: NewEntryWithoutId): Entry | undefine
     ...entry,
   };
 
-  console.log(uuidv4())
+  console.log(uuidv4());
 
   // if (!createdEntry.diagnosisCodes || createdEntry.diagnosisCodes.length === 0) {
   //   // Remove the diagnosisCodes property if it's not provided or empty
@@ -65,4 +65,4 @@ export default {
   addEntry,
   findById,
   addPatientEntry
-}
+};

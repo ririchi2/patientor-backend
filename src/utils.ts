@@ -17,8 +17,8 @@ export const toNewPatientEntry = (object: any): NewPatientEntry => {
     gender: parseGender(object.gender),
     occupation: parseOccupation(object.occupation),
     entries: []
-  }
-}
+  };
+};
 
 export const toNewEntry = (object: any): NewEntryWithoutId => {
   switch (object.type) {
@@ -59,7 +59,7 @@ export const toNewEntry = (object: any): NewEntryWithoutId => {
 const parseComment = (comment: any): string => {
   if (!comment || !isString(comment)) {
     throw new Error('Incorrect or missing comment: ' + comment);
-  };
+  }
   return comment;
 };
 
@@ -74,7 +74,7 @@ const isDate = (date: string): boolean => {
 const parseDate = (date: any): string => {
   if (!date || !isString(date) || !isDate(date)) {
     throw new Error('Incorrect or missing date: ' + date);
-  };
+  }
   return date;
 };
 
@@ -85,7 +85,7 @@ const isWeather = (param: any): param is Weather => {
 const parseWeather = (weather: any): Weather => {
   if (!weather || !isWeather(weather)) {
     throw new Error('Incorrect or missing weather: ' + weather);
-  };
+  }
   return weather;
 };
 

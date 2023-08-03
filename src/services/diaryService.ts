@@ -7,12 +7,12 @@ const getEntries = (): Array<DiaryEntry> => {
   return diaries;
 };
 
-// select fields we want to use with Pick
+// select fields we want to use with TS Pick
 // const getNonSensitiveEntries = (): Pick<DiaryEntry, 'id' | 'date' | 'weather' | 'visibility'>[] => {
 //   return diaries;
 // }
 
-// omit fields we dont want to use with Omit
+// omit fields we dont want to use with TS Omit
 // const getNonSensitiveEntries = (): Omit<DiaryEntry, 'comment'>[] => {
 //   return diaries;
 // }
